@@ -1,0 +1,28 @@
+{% comment %}
+  Academic Service entry renderer
+  Supports entries with name and summary fields
+{% endcomment %}
+
+<ul class="card-text font-weight-light list-group list-group-flush">
+  {% for entry in entries %}
+    <li class="list-group-item">
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12">
+          {% if entry.name %}
+            <h6 class="title font-weight-bold ml-1 ml-md-4" style="margin-bottom: 0.5rem;">
+              <i class="fa-solid fa-user-check" style="margin-right: 0.5rem; color: #6c757d;"></i>
+              {{ entry.name }}
+            </h6>
+          {% endif %}
+
+          {% if entry.summary %}
+            <p class="ml-1 ml-md-4 mb-0" style="line-height: 1.6;">
+              {{ entry.summary | markdownify | remove: '<p>' | remove: '</p>' }}
+            </p>
+          {% endif %}
+        </div>
+      </div>
+    </li>
+  {% endfor %}
+</ul>
+

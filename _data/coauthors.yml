@@ -1,34 +1,52 @@
-"adams":
-  - firstname: ["Edwin", "E.", "E. P.", "Edwin Plimpton"]
-    url: https://en.wikipedia.org/wiki/Edwin_Plimpton_Adams
+# Co-authors configuration
+# Format: lastname -> list of firstname variations and URL
 
-"podolsky":
-  - firstname: ["Boris", "B.", "B. Y.", "Boris Yakovlevich"]
-    url: https://en.wikipedia.org/wiki/Boris_Podolsky
+"qi":
+  - firstname: ["Xiaojuan", "X."]
+    url: https://xjqi.github.io/
 
-"rosen":
-  - firstname: ["Nathan", "N."]
-    url: https://en.wikipedia.org/wiki/Nathan_Rosen
+"liao":
+  - firstname: ["Renjie", "R."]
+    url: https://www.cs.toronto.edu/~rjliao/
 
-"bach":
-  - firstname: ["Johann Sebastian", "J. S."]
-    url: https://en.wikipedia.org/wiki/Johann_Sebastian_Bach
+"liu":
+  - firstname: ["Han", "H."]
+    url: https://www.mccormick.northwestern.edu/research-faculty/directory/profiles/liu-han.html
 
-  - firstname: ["Carl Philipp Emanuel", "C. P. E."]
-    url: https://en.wikipedia.org/wiki/Carl_Philipp_Emanuel_Bach
+"vicol":
+  - firstname: ["P.", "Paul"]
+    url: https://www.paulvicol.com/
 
-"przibram":
-  - firstname: ["Karl"]
-    url: https://link.springer.com/article/10.1007/s00016-019-00242-z
+"zhang":
+  - firstname: ["Xiaofan", "X."]
+    url: https://zhangxiaofan101.github.io/
+  - firstname: ["Yongxing", "Y."]
+    url: https://scholar.google.com/citations?user=dFsd0owAAAAJ&hl=en
 
-"schrodinger":
-  - firstname: ["Erwin"]
-    url: https://en.wikipedia.org/wiki/Erwin_Schr%C3%B6dinger
+"jiang":
+  - firstname: ["Yankai", "Y."]
+    url: https://yankai96.github.io/
 
-"lorentz":
-  - firstname: ["Hendrik Antoon"]
-    url: https://en.wikipedia.org/wiki/Hendrik_Lorentz
+"wang":
+  - firstname: ["Zhaoran", "Z."]
+    url: https://zhaoranwang.github.io/
 
-"planck":
-  - firstname: ["Max"]
-    url: https://en.wikipedia.org/wiki/Max_Planck
+"hu":
+  - firstname: ["Jerry Yao-Chieh", "Jerry", "J. Y.-C.", "J. Y."]
+    url: https://northwestern.jerryhu.page/
+
+"chen":
+  - firstname: ["Siyu", "S."]
+    url: https://ffishy-git.github.io/
+
+"yang":
+  - firstname: ["Zhuoran", "Z."]
+    url: https://zhuoranyang.github.io/
+
+"wen":
+  - firstname: ["Chuan", "C."]
+    url: https://alvinwen428.github.io/
+
+"gao":
+  - firstname: ["Yang", "Y."]
+    url: https://people.iiis.tsinghua.edu.cn/~gaoyang/yang-gao.weebly.com/index.html

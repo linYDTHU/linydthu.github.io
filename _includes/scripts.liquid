@@ -330,3 +330,8 @@
 {% if site.newsletter.enabled %}
   <script defer src="{{ '/assets/js/newsletter.js' | relative_url | bust_file_cache }}"></script>
 {% endif %}
+
+{% if page.layout == 'about' %}
+  <!-- MapMyVisitors -->
+  <script type='text/javascript' id='mapmyvisitors' src='https://mapmyvisitors.com/map.js?cl=080808&w=250&t=tt&d=Po7BSc65DoGBnUcOBVIL-j9oGML1dRy47rUfPtdaijA&co=ffffff&cmo=fc0000&cmn=fc0000&ct=000000'></script>
+{% endif %}

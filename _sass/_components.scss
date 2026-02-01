@@ -80,7 +80,7 @@ ul.task-list input[type="checkbox"] {
 
 @media (min-width: 576px) {
   .profile {
-    width: 30%;
+    width: 25%; // Reduced from 30% to avoid conflict with buttons
 
     .address {
       p {
@@ -173,25 +173,34 @@ ul.task-list input[type="checkbox"] {
 
 .social {
   text-align: center;
+  clear: both; // Clear float to ensure buttons are centered below content
+  margin: 2rem auto; // Add margin for better spacing
+  max-width: 100%; // Ensure full width available for centering
 
   .contact-icons {
-    font-size: 4rem;
+    font-size: 3.5rem; // Slightly reduced from 4rem
+    display: flex; // Use flexbox for better centering
+    justify-content: center; // Center the icons
+    align-items: center; // Vertically center
+    flex-wrap: wrap; // Allow wrapping if needed
+    gap: 1rem; // Add spacing between icons
 
     a {
+      display: inline-flex; // Use inline-flex for better alignment
+      align-items: center; // Vertically center content
+      
       img {
-        width: 3.2rem;
-        height: 3.2rem;
-        margin-bottom: 1rem;
+        width: 2.8rem; // Reduced from 3.2rem
+        height: 2.8rem; // Reduced from 3.2rem
       }
 
       svg {
-        width: 3.5rem;
-        height: 4rem;
-        margin-bottom: 0.5rem;
+        width: 3rem; // Reduced from 3.5rem
+        height: 3.5rem; // Reduced from 4rem
 
         image {
-          width: 3.5rem;
-          height: 3.5rem;
+          width: 3rem; // Reduced from 3.5rem
+          height: 3rem; // Reduced from 3.5rem
         }
       }
 

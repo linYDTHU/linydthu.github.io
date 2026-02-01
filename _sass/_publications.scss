@@ -41,6 +41,8 @@
 
       .preview {
         display: inline-block;
+        width: 100%;
+        max-width: 250px;
       }
 
       .abbr {
@@ -62,13 +64,21 @@
         }
 
         .award {
-          color: var(--global-theme-color) !important;
-          border: 1px solid var(--global-theme-color);
+          background-color: #dc3545 !important;
+          border: none !important;
+          color: white !important;
+          font-weight: bold;
         }
       }
 
       .title {
         font-weight: bolder;
+      }
+
+      .award-highlight {
+        color: #dc3545 !important;
+        font-weight: bold;
+        margin-left: 4px;
       }
 
       .author {
@@ -114,7 +124,16 @@
           }
         }
         a.award.btn {
-          border-color: var(--global-highlight-color);
+          background-color: #dc3545;
+          border-color: #dc3545;
+          color: white !important;
+          font-weight: bold;
+
+          &:hover {
+            background-color: #c82333;
+            border-color: #c82333;
+            color: white !important;
+          }
         }
       }
 
