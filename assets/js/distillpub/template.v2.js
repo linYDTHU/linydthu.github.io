@@ -4672,7 +4672,19 @@ d-references {
   </style>
   <nav role="navigation" class="table-of-contents"></nav>
   <h2>Table of contents</h2>
-  <ul>`;
+  <ul></ul>`;
+
+    // Set the static TOC scaffold.
+    element.innerHTML = ToC;
+
+    const tocNav = element.querySelector("nav.table-of-contents");
+    if (!tocNav) {
+      return;
+    }
+    const tocList = tocNav.querySelector("ul");
+    if (!tocList) {
+      return;
+    }
 
     for (const el of headings) {
       // should element be included in TOC?
@@ -4683,17 +4695,21 @@ d-references {
       const title = el.textContent;
       const link = "#" + el.getAttribute("id");
 
-      let newLine = "<li>" + '<a href="' + link + '">' + title + "</a>" + "</li>";
-      if (el.tagName == "H3") {
-        newLine = "<ul>" + newLine + "</ul>";
-      } else {
-        newLine += "<br>";
-      }
-      ToC += newLine;
-    }
+      const li = document.createElement("li");
+      const a = document.createElement("a");
+      a.setAttribute("href", link);
+      a.textContent = title;
+      li.appendChild(a);
 
-    ToC += "</ul></nav>";
-    element.innerHTML = ToC;
+      if (el.tagName === "H3") {
+        const nestedUl = document.createElement("ul");
+        nestedUl.appendChild(li);
+        tocList.appendChild(nestedUl);
+      } else {
+        tocList.appendChild(li);
+        tocList.appendChild(document.createElement("br"));
+      }
+    }
   }
 
   // Copyright 2018 The Distill Template Authors
