@@ -4235,7 +4235,9 @@ ${css}
 
       if (this.hasAttribute("block")) {
         // normalize the tab indents
-        content = content.replace(/\n/, "");
+        if (content.charAt(0) === "\n") {
+          content = content.slice(1);
+        }
         const tabs = content.match(/\s*/);
         content = content.replace(new RegExp("\n" + tabs, "g"), "\n");
         content = content.trim();
