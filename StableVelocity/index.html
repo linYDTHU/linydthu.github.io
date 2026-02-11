@@ -1,0 +1,1062 @@
+---
+layout: none
+sitemap: false
+---
+<!DOCTYPE html>
+<html lang="en">
+
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+<!-- Premium font pairing: Source Serif 4 for headings, Inter for body -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+<style type="text/css">
+/* ===== Base & Typography ===== */
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+    font-family: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 350;
+    font-size: 16.5px;
+    line-height: 1.7;
+    letter-spacing: -0.01em;
+    color: #1a1a2e;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 80px;
+    background: #fff;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+@media screen and (min-width: 980px) {
+    body { width: 980px; }
+}
+
+h1, h2, h3, h4 {
+    font-family: "Source Serif 4", "Georgia", serif;
+    letter-spacing: -0.02em;
+}
+
+h1 {
+    font-weight: 600;
+    font-size: 42px;
+    line-height: 1.18;
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.8em;
+    font-weight: 600;
+    margin: 16px 0px 4px 0px;
+    text-align: left;
+}
+
+h3 {
+    font-weight: 600;
+    margin: 20px 0px 6px 0px;
+    text-align: left;
+}
+
+h4 {
+    font-weight: 600;
+    margin: 14px 0px 4px 0px;
+    font-size: 1.1em;
+    color: #333;
+}
+
+a:link, a:visited {
+    color: #1565C0;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+a:hover {
+    color: #208799;
+}
+
+p {
+    line-height: 1.7;
+    margin: 10px 0;
+}
+
+/* ===== Layout ===== */
+.paper-title {
+    padding: 1px 0px 1px 0px;
+}
+
+section {
+    margin: 40px 0px 40px 0px;
+    text-align: justify;
+    clear: both;
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/* ===== Authors & Affiliations ===== */
+.author-row-new {
+    text-align: center;
+}
+.author-row-new a {
+    display: inline-block;
+    font-size: 19px;
+    padding: 4px;
+    font-family: "Inter", sans-serif;
+}
+.author-row-new sup {
+    color: #313436;
+    font-size: 11px;
+}
+.affiliations-new {
+    font-size: 17px;
+    text-align: center;
+    width: 80%;
+    margin: 0 auto 20px;
+}
+.affiliations {
+    font-size: 17px;
+    text-align: center;
+    font-family: "Inter", sans-serif;
+}
+
+.row { margin: 16px 0; }
+.affil-row { margin-top: 18px; }
+.teaser { max-width: 100%; }
+.text-center { text-align: center; }
+
+.venue { font-size: 23px; }
+
+/* ===== HR accent ===== */
+hr {
+    height: 2px;
+    border: 0;
+    background: linear-gradient(90deg, #1565C0 0%, #42a5f5 40%, transparent 100%);
+    margin: 0 0 16px 0;
+    border-radius: 2px;
+}
+
+/* ===== Buttons ===== */
+.paper-btn-parent {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0px;
+    gap: 16px;
+    font-size: 17px;
+}
+
+.paper-btn, .github-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 24px;
+    border-radius: 50px;
+    background: #f0f4f8;
+    color: #1565C0;
+    font-weight: 500;
+    font-family: "Inter", sans-serif;
+    transition: all 0.25s cubic-bezier(.4,0,.2,1);
+    border: 1px solid #e0e8f0;
+}
+
+.paper-btn:hover, .github-btn:hover {
+    color: #fff;
+    background: #1565C0;
+    border-color: #1565C0;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(21,101,192,0.25);
+}
+
+/* ===== Code / Pre ===== */
+pre {
+    font-size: 0.85em;
+    padding: 16px;
+    border-radius: 8px;
+    background-color: #f5f7fa;
+    border: 1px solid #e8ecf1;
+    overflow-x: auto;
+}
+
+#bibtex pre {
+    font-size: 13.5px;
+    background-color: #f5f7fa;
+    padding: 18px;
+    border: 1px solid #e0e8f0;
+    border-radius: 10px;
+}
+
+/* ===== Captions ===== */
+.caption {
+    font-size: 15px;
+    color: #555;
+    margin-top: 6px;
+    margin-bottom: 10px;
+    text-align: center;
+    line-height: 1.55;
+}
+
+/* ===== Figures ===== */
+figure {
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.figure img {
+    width: 100%;
+    border-radius: 6px;
+}
+
+.material-icons {
+    vertical-align: -6px;
+}
+
+/* ===== Blockquote ===== */
+blockquote {
+    background: linear-gradient(135deg, #f0f4ff 0%, #e8f0fe 100%);
+    padding: 16px 24px;
+    margin: 16px 0;
+    border-radius: 12px;
+    border-left: 4px solid #1565C0;
+}
+blockquote p {
+    margin: 8px 0;
+}
+
+/* ===== Method Cards ===== */
+.method-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    margin: 20px 0;
+}
+.method-card {
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 16px;
+    text-align: center;
+    transition: box-shadow 0.3s ease;
+}
+.method-card:hover {
+    box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+}
+.method-card h4 {
+    color: #1565C0;
+    margin: 0 0 8px 0;
+    font-size: 18px;
+}
+.method-card p {
+    font-size: 14px;
+    color: #555;
+    margin: 0;
+    text-align: center;
+}
+
+/* ===== Image Grid ===== */
+.image-grid-three {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    width: 90%;
+    justify-items: center;
+    margin: 0 auto;
+}
+.image-grid-three img { width: 100%; }
+.image-grid-three .caption {
+    font-size: 14px;
+    color: #555;
+    text-align: center;
+    margin-top: 4px;
+}
+
+/* ===== Prompt Text ===== */
+.prompt-text {
+    font-style: italic;
+    font-size: 14.5px;
+    color: #555;
+    text-align: center;
+    margin: 12px 20px;
+    line-height: 1.6;
+}
+
+/* ===== Comparison Table ===== */
+.comparison-table {
+    width: 90%;
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+.comparison-table th {
+    font-weight: 500;
+    font-size: 14px;
+    padding: 8px 4px;
+    text-align: center;
+    color: #444;
+    font-family: "Inter", sans-serif;
+}
+.comparison-table td {
+    padding: 4px;
+    text-align: center;
+}
+.comparison-table img {
+    width: 100%;
+    max-width: 280px;
+    border-radius: 6px;
+}
+
+/* ===== Feature List ===== */
+ul.feature-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+ul.feature-list li {
+    padding: 5px 0;
+    line-height: 1.6;
+}
+ul.feature-list li::before {
+    content: "✓ ";
+    color: #1565C0;
+    font-weight: bold;
+}
+
+/* ===== Highlight Box ===== */
+.highlight-box {
+    background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 100%);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin: 16px 0;
+}
+
+/* ===== Results Row ===== */
+.results-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    align-items: center;
+    margin: 20px 0;
+}
+.results-row .result-item { text-align: center; }
+.results-row .result-item img { width: 100%; }
+.results-row .result-item .caption { font-size: 14px; margin-top: 6px; }
+
+/* ===== Browser Window Frame ===== */
+.browser-frame {
+    background: #fff;
+    border: 1px solid #d8dee6;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.06), 0 1px 4px rgba(0,0,0,0.04);
+    margin: 20px auto;
+    transition: box-shadow 0.3s ease;
+}
+.browser-frame:hover {
+    box-shadow: 0 8px 32px rgba(0,0,0,0.09), 0 2px 8px rgba(0,0,0,0.05);
+}
+.browser-bar {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 10px 14px;
+    background: linear-gradient(180deg, #f8f9fb 0%, #f0f2f5 100%);
+    border-bottom: 1px solid #e0e4ea;
+}
+.browser-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+}
+.browser-dot.red { background: #ff5f57; }
+.browser-dot.yellow { background: #febc2e; }
+.browser-dot.green { background: #28c840; }
+.browser-bar-url {
+    flex: 1;
+    margin-left: 8px;
+    background: #fff;
+    border: 1px solid #dde1e8;
+    border-radius: 5px;
+    padding: 3px 12px;
+    font-size: 11.5px;
+    color: #8a8f98;
+    font-family: "Inter", sans-serif;
+    letter-spacing: 0;
+}
+.browser-content {
+    padding: 0;
+}
+.browser-content img,
+.browser-content table {
+    display: block;
+    width: 100%;
+}
+.browser-content .comparison-table {
+    width: 100%;
+    margin: 0;
+    padding: 12px;
+}
+
+/* ===== Subtle Background Gradients ===== */
+.gradient-section-1 {
+    background: linear-gradient(180deg, rgba(245,247,255,0) 0%, rgba(232,240,254,0.35) 50%, rgba(245,247,255,0) 100%);
+    margin-left: -20px;
+    margin-right: -20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 0;
+}
+.gradient-section-2 {
+    background: linear-gradient(180deg, rgba(255,248,245,0) 0%, rgba(255,240,232,0.25) 50%, rgba(255,248,245,0) 100%);
+    margin-left: -20px;
+    margin-right: -20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.gradient-section-3 {
+    background: linear-gradient(180deg, rgba(240,250,245,0) 0%, rgba(224,244,234,0.25) 50%, rgba(240,250,245,0) 100%);
+    margin-left: -20px;
+    margin-right: -20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/* ===== Floating Sticky Nav ===== */
+.floating-nav {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%) translateY(-100%);
+    z-index: 1000;
+    background: rgba(255,255,255,0.85);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(0,0,0,0.06);
+    border-radius: 0 0 14px 14px;
+    padding: 10px 28px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+    transition: transform 0.4s cubic-bezier(.4,0,.2,1), opacity 0.4s ease;
+    opacity: 0;
+}
+.floating-nav.visible {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+}
+.floating-nav a {
+    font-family: "Inter", sans-serif;
+    font-size: 13.5px;
+    font-weight: 500;
+    color: #444;
+    text-decoration: none;
+    padding: 4px 2px;
+    position: relative;
+    transition: color 0.2s ease;
+}
+.floating-nav a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #1565C0;
+    transition: width 0.25s ease;
+    border-radius: 2px;
+}
+.floating-nav a:hover {
+    color: #1565C0;
+}
+.floating-nav a:hover::after {
+    width: 100%;
+}
+.floating-nav-title {
+    font-family: "Source Serif 4", Georgia, serif;
+    font-size: 14.5px;
+    font-weight: 600;
+    color: #1565C0;
+    white-space: nowrap;
+    margin-right: 4px;
+}
+.nav-divider {
+    width: 1px;
+    height: 18px;
+    background: #d0d5dd;
+}
+
+/* ===== Scroll Animations ===== */
+.reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.7s cubic-bezier(.4,0,.2,1), transform 0.7s cubic-bezier(.4,0,.2,1);
+}
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Stagger children */
+.reveal-child {
+    opacity: 0;
+    transform: translateY(18px);
+    transition: opacity 0.5s cubic-bezier(.4,0,.2,1), transform 0.5s cubic-bezier(.4,0,.2,1);
+}
+.reveal-child.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ===== Responsive ===== */
+@media screen and (max-width: 700px) {
+    body { font-size: 15px; }
+    h1 { font-size: 28px; }
+    .method-grid { grid-template-columns: 1fr; }
+    .image-grid-three { grid-template-columns: 1fr; }
+    .comparison-table img { max-width: 100%; }
+    .results-row { grid-template-columns: 1fr; }
+    .floating-nav { padding: 8px 16px; gap: 14px; }
+    .floating-nav a { font-size: 12px; }
+    .floating-nav-title { font-size: 13px; }
+    .browser-frame { border-radius: 8px; }
+    .gradient-section-1,
+    .gradient-section-2,
+    .gradient-section-3 {
+        margin-left: -12px;
+        margin-right: -12px;
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+}
+</style>
+
+<head>
+    <title>Stable Velocity: A Variance Perspective on Flow Matching</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:description" content="Stable Velocity: A Variance Perspective on Flow Matching"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Stable Velocity: A Variance Perspective on Flow Matching">
+</head>
+
+<body>
+
+<!-- Floating Sticky Navigation -->
+<nav class="floating-nav" id="floatingNav">
+    <span class="floating-nav-title">Stable Velocity</span>
+    <span class="nav-divider"></span>
+    <a href="#abstract">Abstract</a>
+    <a href="#variance-analysis">Analysis</a>
+    <a href="#stablevm">Method</a>
+    <a href="#stablevs">Sampling</a>
+    <a href="#bibtex">Citation</a>
+</nav>
+
+<div class="container">
+    <!-- ==================== Hero ==================== -->
+    <div class="paper-title" id="hero">
+    <h1>
+        <font color="#1565C0">Stable Velocity</font>: A Variance Perspective on Flow Matching
+    </h1>
+    </div>
+
+    <div id="authors" class="reveal">
+        <center>
+            <div class="author-row-new">
+                <a href="https://linydthu.github.io/" target="_blank">Donglin&nbsp;Yang<sup>1,3</sup></a>,
+                <a href="https://scholar.google.com/citations?user=dFsd0owAAAAJ&hl=en" target="_blank">Yongxing&nbsp;Zhang<sup>1</sup></a>,
+                <a href="https://xinyu-andy.github.io/" target="_blank">Xin&nbsp;Yu<sup>2</sup></a>,
+                <a href="https://liang-hou.github.io/" target="_blank">Liang&nbsp;Hou<sup>3</sup></a>,
+                <a href="https://www.xtao.website/" target="_blank">Xin&nbsp;Tao<sup>3</sup></a>,
+                <a href="https://magicwpf.github.io/" target="_blank">Pengfei&nbsp;Wan<sup>3</sup></a>,
+                <a href="https://xjqi.github.io/" target="_blank">Xiaojuan&nbsp;Qi<sup>1</sup></a>,
+                <a href="https://lrjconan.github.io/" target="_blank">Renjie&nbsp;Liao<sup>2</sup></a>
+            </div>
+        </center>
+        <center>
+        <div class="affiliations">
+            <span><sup>1</sup>The University of Hong Kong</span>&nbsp;&nbsp;&nbsp;
+            <span><sup>2</sup>University of British Columbia</span>&nbsp;&nbsp;&nbsp;
+            <span><sup>3</sup>Kling Team, Kuaishou Technology</span>
+        </div>
+        </center>
+
+        <div style="clear: both">
+            <div class="paper-btn-parent">
+                <a class="paper-btn" href="https://arxiv.org/abs/2602.05435">
+                    <span class="fas fa-file-alt"></span>
+                    Paper
+                </a>
+                <a class="github-btn" href="https://github.com/linYDTHU/StableVelocity">
+                    <span class="fab fa-github"></span>
+                    Code
+                </a>
+           </div>
+        </div>
+    </div>
+
+    <!-- ==================== Abstract ==================== -->
+    <section id="abstract" class="reveal">
+        <h2>Abstract</h2>
+        <hr>
+        <p>
+            By explicitly characterizing the variance of flow matching, we identify
+            1) a <b>high-variance regime</b> near the prior, where optimization is challenging, and
+            2) a <b>low-variance regime</b> near the data distribution, where conditional and marginal velocities nearly coincide.
+            Leveraging this insight, we propose <b>Stable Velocity</b>, a unified framework that improves both training and sampling.
+            For training, we introduce <b>Stable Velocity Matching (StableVM)</b>, an unbiased variance-reduction objective, along with
+            <b>Variance-Aware Representation Alignment (VA-REPA)</b>, which adaptively strengthens auxiliary supervision in the low-variance regime.
+            For inference, we show that dynamics in the low-variance regime admit closed-form simplifications, enabling
+            <b>Stable Velocity Sampling (StableVS)</b>, a finetuning-free acceleration.
+        </p>
+    </section>
+
+    <!-- ==================== Variance Analysis ==================== -->
+    <section id="variance-analysis" class="gradient-section-1 reveal">
+        <h2>Variance Analysis of Flow Matching</h2>
+        <hr>
+
+        <h3>Conditional Flow Matching (CFM)</h3>
+        <p>
+            Training typically uses the CFM objective:
+        </p>
+        <p style="text-align: center; font-size: 1.1em;">
+            \( \min_{\boldsymbol{\theta}} \; \mathbb{E}_{t,\, q(\mathbf{x}_0),\, p_t(\mathbf{x}_t|\mathbf{x}_0)} \lambda_t \| \mathbf{v}_{\boldsymbol{\theta}}(\mathbf{x}_t, t) - \mathbf{v}_t(\mathbf{x}_t | \mathbf{x}_0) \|^2 \)
+        </p>
+        <p>
+            where \( \lambda_t \) is a positive weighting function and \( \mathbf{v}_{\boldsymbol{\theta}} \) is a neural velocity field.
+            The minimizer of CFM is provably the true marginal velocity field:
+        </p>
+        <p style="text-align: center; font-size: 1.1em;">
+            \( \mathbf{v}^*_{\boldsymbol{\theta}}(\mathbf{x}_t, t) = \mathbb{E}_{p_t(\mathbf{x}_0 \mid \mathbf{x}_t)}\!\left[\mathbf{v}_t(\mathbf{x}_t \mid \mathbf{x}_0)\right] = \mathbf{v}_t(\mathbf{x}_t) \)
+        </p>
+
+        <h3>Variance of CFM</h3>
+        <p>
+            Although unbiased, the CFM target is only a <b>single-sample Monte Carlo estimator</b> of the marginal velocity, which can exhibit high variance.
+            We quantify this variance by the average trace of the conditional velocity covariance at time \( t \):
+        </p>
+        <p style="text-align: center; font-size: 1.1em;">
+            \( \mathcal{V}_{\text{CFM}}(t) = \mathbb{E}_{p_t(\mathbf{x}_t)}\!\left[\mathrm{Tr}\!\left(\mathrm{Cov}_{p_t(\mathbf{x}_0 \mid \mathbf{x}_t)}\!\big(\mathbf{v}_t(\mathbf{x}_t \mid \mathbf{x}_0)\big)\right)\right] \)
+        </p>
+        <p style="text-align: center; font-size: 1.0em;">
+            \( = \mathbb{E}_{q(\mathbf{x}_0),\, p_t(\mathbf{x}_t|\mathbf{x}_0)}\!\left[\| \mathbf{v}_t(\mathbf{x}_t \mid \mathbf{x}_0) - \mathbf{v}_t(\mathbf{x}_t) \|^2\right] \)
+        </p>
+        <p>
+            We evaluate \( \mathcal{V}_{\text{CFM}}(t) \) on Gaussian mixture models (GMMs), CIFAR-10, and ImageNet latent codes produced by the pretrained Stable Diffusion VAE.
+            As shown below, two consistent patterns emerge:
+        </p>
+
+        <div class="browser-frame" style="width: 85%;">
+            <div class="browser-bar">
+                <span class="browser-dot red"></span>
+                <span class="browser-dot yellow"></span>
+                <span class="browser-dot green"></span>
+                <span class="browser-bar-url">variance_curves.png</span>
+            </div>
+            <div class="browser-content">
+                <img src="assets/images/variance_curves.png" alt="Variance Curves" style="display:block;width:100%;">
+            </div>
+        </div>
+
+        <blockquote class="reveal">
+            <p>
+                <b>Low- vs. high-variance regimes.</b> \( \mathcal{V}_{\text{CFM}}(t) \) remains close to zero at small \( t \) but increases rapidly as \( t \) grows,
+                naturally separating the process into a <em>low-variance regime</em> (\( 0 \le t < \xi \)) and a <em>high-variance regime</em> (\( \xi \le t \le 1 \)).
+            </p>
+            <p>
+                <b>Effect of dimensionality.</b> As data dimensionality increases, the split point \( \xi \) shifts toward \( 1 \),
+                enlarging the low-variance regime while also increasing the overall variance magnitude.
+            </p>
+        </blockquote>
+
+        <div class="browser-frame reveal" style="width: 90%;">
+            <div class="browser-bar">
+                <span class="browser-dot red"></span>
+                <span class="browser-dot yellow"></span>
+                <span class="browser-dot green"></span>
+                <span class="browser-bar-url">variance_demo.png</span>
+            </div>
+            <div class="browser-content">
+                <img src="assets/images/variance_demo.png" alt="Variance Demo" style="display:block;width:100%;">
+            </div>
+        </div>
+        <p class="caption"><b>Illustration of CFM variance \( \mathcal{V}_{\text{CFM}}(t) \).</b>
+        (a) The <em>low-variance regime</em> (\( t \le \xi \)), where the posterior \( p_t(\mathbf{x}_0 \mid \mathbf{x}_t) \) is sharply concentrated and the conditional velocity \( \mathbf{v}_t(\mathbf{x}_t \mid \mathbf{x}_0) \) nearly coincides with the true velocity \( \mathbf{v}_t(\mathbf{x}_t) \), yielding \( \mathcal{V}_{\text{CFM}}(t) \approx 0 \).
+        (b) The <em>high-variance regime</em> (\( t > \xi \)), the posterior spreads over multiple reference samples, causing the conditional velocity to fluctuate and resulting in a large \( \mathcal{V}_{\text{CFM}}(t) \).</p>
+
+    </section>
+
+    <!-- ==================== StableVM & VA-REPA ==================== -->
+    <section id="stablevm" class="gradient-section-2 reveal">
+        <h2>Stable Velocity Matching (StableVM) & VA-REPA</h2>
+        <hr>
+        <h3>StableVM</h3>
+        <p>
+            We propose Stable Velocity Matching (StableVM), a variance-reduced yet unbiased alternative to CFM.
+            Given \( n \) reference samples \( \{\mathbf{x}_0^i\}_{i=1}^n \) drawn i.i.d. from \( q(\mathbf{x}_0) \),
+            we sample \( \mathbf{x}_t \) from a composite conditional path
+            \( p_t^{\text{GMM}}\!\left(\mathbf{x}_t \mid \{\mathbf{x}_0^i\}_{i=1}^n\right) := \frac{1}{n}\sum_{i=1}^{n} p_t(\mathbf{x}_t \mid \mathbf{x}_0^i) \),
+            and train a neural velocity field \( \mathbf{v}_\theta(\mathbf{x}_t, t) \) by minimizing:
+        </p>
+        <p style="text-align: center; font-size: 1.1em;">
+            \[
+            \mathcal{L}_{\text{StableVM}}(\boldsymbol{\theta}) = \mathbb{E}_{\substack{t,\, \{\mathbf{x}_0^i\} \sim q^n \\ \mathbf{x}_t \sim p_t^{\text{GMM}}}}
+            \left\| \mathbf{v}_{\boldsymbol{\theta}}(\mathbf{x}_t, t) - \frac{\sum_{k=1}^n p_t(\mathbf{x}_t \mid \mathbf{x}_0^k)\, \mathbf{v}_t(\mathbf{x}_t \mid \mathbf{x}_0^k)}{\sum_{j=1}^n p_t(\mathbf{x}_t \mid \mathbf{x}_0^j)} \right\|^2
+            \]
+        </p>
+        <ul class="feature-list">
+            <li>Unbiased estimator of the true marginal velocity \( \mathbf{v}_t(\mathbf{x}_t) \)</li>
+            <li>Strictly lower variance than standard CFM</li>
+            <li>Compatible with general stochastic interpolants</li>
+        </ul>
+
+        <h3>Variance-Aware Representation Alignment (VA-REPA)</h3>
+        <p>
+            Representation alignment methods (e.g., REPA) are effective only when the noisy input retains semantic information.
+            From a variance perspective, this occurs <b>exclusively in the low-variance regime</b>.
+        </p>
+        <div class="browser-frame reveal" style="width: 85%;">
+            <div class="browser-bar">
+                <span class="browser-dot red"></span>
+                <span class="browser-dot yellow"></span>
+                <span class="browser-dot green"></span>
+                <span class="browser-bar-url">regime_aware_repa_motivation.png</span>
+            </div>
+            <div class="browser-content">
+                <img src="assets/images/regime_aware_repa_motivation.png" alt="VA-REPA Motivation" style="display:block;width:100%;">
+            </div>
+        </div>
+        <p>
+            Applying representation alignment uniformly along the diffusion trajectory introduces noisy supervision.
+            VA-REPA activates alignment <b>only in the low-variance regime</b>, leading to consistent improvements over REPA as well as its variants.
+        </p>
+
+        <h3>Results</h3>
+        <p>
+            We compare StableVM + VA-REPA against state-of-the-art latent diffusion transformers and representation alignment methods
+            on ImageNet 256×256. With CFG, our method achieves <b>FID = 1.33</b> with only 480 epochs.
+            Without CFG, our approach consistently outperforms REPA across all model sizes (SiT-B/2, SiT-L/2, SiT-XL/2) and training iterations.
+        </p>
+        <div class="results-row reveal">
+            <div class="result-item">
+                <div class="browser-frame">
+                    <div class="browser-bar">
+                        <span class="browser-dot red"></span>
+                        <span class="browser-dot yellow"></span>
+                        <span class="browser-dot green"></span>
+                        <span class="browser-bar-url">results — with CFG</span>
+                    </div>
+                    <div class="browser-content">
+                        <img src="assets/images/result_1.png" alt="CFG Results on ImageNet 256x256" style="display:block;width:100%;">
+                    </div>
+                </div>
+                <p class="caption"><b>With CFG</b></p>
+            </div>
+            <div class="result-item">
+                <div class="browser-frame">
+                    <div class="browser-bar">
+                        <span class="browser-dot red"></span>
+                        <span class="browser-dot yellow"></span>
+                        <span class="browser-dot green"></span>
+                        <span class="browser-bar-url">results — without CFG</span>
+                    </div>
+                    <div class="browser-content">
+                        <img src="assets/images/result_2.png" alt="Results without CFG across model scales" style="display:block;width:100%;">
+                    </div>
+                </div>
+                <p class="caption"><b>Without CFG</b></p>
+            </div>
+        </div>
+
+        <p>
+            StableVM and VA-REPA are <b>general-purpose training objectives</b> that are fully compatible with existing representation alignment approaches.
+            When combined with REPA, REG, and iREPA, StableVM consistently improves their performance across all metrics.
+        </p>
+        <div class="browser-frame reveal" style="width: 55%;">
+            <div class="browser-bar">
+                <span class="browser-dot red"></span>
+                <span class="browser-dot yellow"></span>
+                <span class="browser-dot green"></span>
+                <span class="browser-bar-url">compatibility_results.png</span>
+            </div>
+            <div class="browser-content">
+                <img src="assets/images/result_3.png" alt="Compatibility with other methods" style="display:block;width:100%;">
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== StableVS ==================== -->
+    <section id="stablevs" class="gradient-section-3 reveal">
+        <h2>Stable Velocity Sampling (StableVS)</h2>
+        <hr>
+        <p>
+            In the low-variance regime, the probability flow dynamics admit <b>closed-form simplifications</b>.
+        </p>
+
+        <h3>StableVS for SDE</h3>
+        <p>
+            For the reverse SDE, we derive the following DDIM-style posterior:
+        </p>
+        <p style="text-align: center; font-size: 1.1em;">
+            \( p_\tau(\mathbf{x}_\tau \mid \mathbf{x}_t, \mathbf{v}_t(\mathbf{x}_t)) = \mathcal{N}\!\left(\boldsymbol{\mu}_{\tau \mid t},\; \beta_t^2 \mathbf{I}\right) \)
+        </p>
+        <p>
+            where \( \beta_t = f_\beta \sigma_\tau \) and \( f_\beta \in [0,1] \) is a controllable parameter.
+            We then define the noise ratio \( \rho_t := \sqrt{(\sigma_\tau^2 - \beta_t^2)/\sigma_t^2} \)
+            and the velocity coupling coefficient
+            \( \lambda_t := \frac{\alpha_\tau - \alpha_t \rho_t}{\alpha_t' - \alpha_t \sigma_t'/\sigma_t} \).
+            The posterior mean \( \boldsymbol{\mu}_{\tau \mid t} \) is then given by:
+        </p>
+        <p style="text-align: center; font-size: 1.1em;">
+            \( \boldsymbol{\mu}_{\tau \mid t} = \left(\rho_t - \lambda_t \frac{\sigma_t'}{\sigma_t}\right) \mathbf{x}_t + \lambda_t \mathbf{v}_t(\mathbf{x}_t) \)
+        </p>
+
+        <h3>StableVS for ODE</h3>
+        <p>
+            For the probability flow ODE, we define the integral factor
+            \( \Psi_{t,\tau} := \frac{1}{C_t}\int_{t}^{\tau} \frac{C(s)}{\sigma_s}\, ds \),
+            where \( C(s) = \alpha_s' - \alpha_s \sigma_s'/\sigma_s \).
+            The exact solution at timestep \( \tau \) is:
+        </p>
+        <p style="text-align: center; font-size: 1.1em;">
+            \( \mathbf{x}_{\tau} = \sigma_{\tau} \left[\left(\frac{1}{\sigma_{t}} - \frac{\sigma_{t}'}{\sigma_{t}} \Psi_{t,\tau}\right) \mathbf{x}_{t} + \Psi_{t,\tau}\, \mathbf{v}_{t}(\mathbf{x}_{t})\right] \)
+        </p>
+
+        <p>
+            In the special case of linear interpolant (i.e., \( \alpha_t = 1 - t \), \( \sigma_t = t \)),
+            setting \( \beta_t = 0 \) makes the two samplers coincide:
+        </p>
+        <p style="text-align: center; font-size: 1.1em;">
+            \( \mathbf{x}_{\tau} = \mathbf{x}_{t} + (\tau - t)\, \mathbf{v}_{t}(\mathbf{x}_{t}) \)
+        </p>
+        <p>
+            In the <em>low-variance regime</em>, the probability flow trajectory reduces to a <b>straight line with constant velocity</b>,
+            allowing exact integration via Euler steps of <b>arbitrary size</b>.
+        </p>
+
+        <h3>Qualitative Comparisons: Text-to-Image</h3>
+
+        <!-- SD3.5 -->
+        <h4>StableVS on SD3.5</h4>
+        <p class="prompt-text">
+            Prompt: "A turquoise river winds through a lush canyon. Thick moss and dense ferns blanket the rocky walls; multiple waterfalls cascade from above, enveloped in mist. At noon, sunlight filters through the dense canopy, dappling the river surface with shimmering light. The atmosphere is humid and fresh, pulsing with primal jungle vitality. No humans, text, or artificial traces present."
+        </p>
+        <div class="browser-frame reveal">
+            <div class="browser-bar">
+                <span class="browser-dot red"></span>
+                <span class="browser-dot yellow"></span>
+                <span class="browser-dot green"></span>
+                <span class="browser-bar-url">StableVS — SD3.5 comparison</span>
+            </div>
+            <div class="browser-content">
+                <table class="comparison-table">
+                    <tr>
+                        <th>Euler (30 steps)</th>
+                        <th>Euler (20 steps)</th>
+                        <th>Euler (11) + StableVS (9)</th>
+                    </tr>
+                    <tr>
+                        <td><img src="assets/images/sd35_euler_30steps.jpg" alt="SD3.5 Euler 30 steps"></td>
+                        <td><img src="assets/images/sd35_euler_20steps.jpg" alt="SD3.5 Euler 20 steps"></td>
+                        <td><img src="assets/images/sd35_stablevs_20steps.jpg" alt="SD3.5 StableVS 20 steps"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- Flux -->
+        <h4>StableVS on Flux</h4>
+        <p class="prompt-text">
+            Prompt: "A cat holding a sign that says Stable Velocity"
+        </p>
+        <div class="browser-frame reveal">
+            <div class="browser-bar">
+                <span class="browser-dot red"></span>
+                <span class="browser-dot yellow"></span>
+                <span class="browser-dot green"></span>
+                <span class="browser-bar-url">StableVS — Flux comparison</span>
+            </div>
+            <div class="browser-content">
+                <table class="comparison-table">
+                    <tr>
+                        <th>Euler (30 steps)</th>
+                        <th>Euler (20 steps)</th>
+                        <th>Euler (11) + StableVS (9)</th>
+                    </tr>
+                    <tr>
+                        <td><img src="assets/images/flux_euler_30steps.jpg" alt="Flux Euler 30 steps"></td>
+                        <td><img src="assets/images/flux_euler_20steps.jpg" alt="Flux Euler 20 steps"></td>
+                        <td><img src="assets/images/flux_stablevs_20steps.jpg" alt="Flux StableVS 20 steps"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- Qwen -->
+        <h4>StableVS on Qwen-Image</h4>
+        <p class="prompt-text">
+            Prompt: "A 20-year-old East Asian girl with delicate, charming features and large, bright brown eyes—expressive and lively, with a cheerful or subtly smiling expression. Her naturally wavy long hair is either loose or tied in twin ponytails. She has fair skin and light makeup accentuating her youthful freshness. She wears a modern, cute dress or relaxed outfit in bright, soft colors—lightweight fabric, minimalist cut. She stands indoors at an anime convention, surrounded by banners, posters, or stalls. Lighting is typical indoor illumination—no staged lighting—and the image resembles a casual iPhone snapshot: unpretentious composition, yet brimming with vivid, fresh, youthful charm."
+        </p>
+        <div class="browser-frame reveal">
+            <div class="browser-bar">
+                <span class="browser-dot red"></span>
+                <span class="browser-dot yellow"></span>
+                <span class="browser-dot green"></span>
+                <span class="browser-bar-url">StableVS — Qwen-Image comparison</span>
+            </div>
+            <div class="browser-content">
+                <table class="comparison-table">
+                    <tr>
+                        <th>Euler (30 steps)</th>
+                        <th>Euler (17 steps)</th>
+                        <th>Euler (8) + StableVS (9)</th>
+                    </tr>
+                    <tr>
+                        <td><img src="assets/images/qwen_euler_30steps.jpg" alt="Qwen Euler 30 steps"></td>
+                        <td><img src="assets/images/qwen_euler_17steps.jpg" alt="Qwen Euler 17 steps"></td>
+                        <td><img src="assets/images/qwen_stablevs_17steps.jpg" alt="Qwen StableVS 17 steps"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <h3>Qualitative Comparisons: Text-to-Video</h3>
+
+        <!-- Wan2.2 Video: Boxing -->
+        <h4>StableVS on Wan2.2</h4>
+        <p class="prompt-text">
+            Prompt: "Two anthropomorphic cats in comfy boxing gear and bright gloves fight intensely on a spotlighted stage."
+        </p>
+        <div class="browser-frame reveal">
+            <div class="browser-bar">
+                <span class="browser-dot red"></span>
+                <span class="browser-dot yellow"></span>
+                <span class="browser-dot green"></span>
+                <span class="browser-bar-url">StableVS — Wan2.2 (boxing)</span>
+            </div>
+            <div class="browser-content">
+                <table class="comparison-table">
+                    <tr>
+                        <th>UniPC (30 steps)</th>
+                        <th>UniPC (20 steps)</th>
+                        <th>UniPC (11) + StableVS (9)</th>
+                    </tr>
+                    <tr>
+                        <td><img src="assets/gifs/boxing_unipc_30steps.gif" alt="Boxing UniPC 30 steps"></td>
+                        <td><img src="assets/gifs/boxing_unipc_20steps.gif" alt="Boxing UniPC 20 steps"></td>
+                        <td><img src="assets/gifs/boxing_stablevs_20steps.gif" alt="Boxing StableVS 20 steps"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <p class="prompt-text">
+            Prompt: "A horse jumps over a fence."
+        </p>
+        <div class="browser-frame reveal">
+            <div class="browser-bar">
+                <span class="browser-dot red"></span>
+                <span class="browser-dot yellow"></span>
+                <span class="browser-dot green"></span>
+                <span class="browser-bar-url">StableVS — Wan2.2 (horse jump)</span>
+            </div>
+            <div class="browser-content">
+                <table class="comparison-table">
+                    <tr>
+                        <th>UniPC (30 steps)</th>
+                        <th>UniPC (20 steps)</th>
+                        <th>UniPC (11) + StableVS (9)</th>
+                    </tr>
+                    <tr>
+                        <td><img src="assets/gifs/horse_jump_unipc_30steps.gif" alt="Horse Jump UniPC 30 steps"></td>
+                        <td><img src="assets/gifs/horse_jump_unipc_20steps.gif" alt="Horse Jump UniPC 20 steps"></td>
+                        <td><img src="assets/gifs/horse_jump_stablevs_20steps.gif" alt="Horse Jump StableVS 20 steps"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== Citation ==================== -->
+    <section id="bibtex" class="reveal">
+        <h2>Citation</h2>
+        <hr>
+        <pre><code>@misc{yang2026stablevelocityvarianceperspective,
+        title={Stable Velocity: A Variance Perspective on Flow Matching}, 
+        author={Donglin Yang and Yongxing Zhang and Xin Yu and Liang Hou and Xin Tao and Pengfei Wan and Xiaojuan Qi and Renjie Liao},
+        year={2026},
+        eprint={2602.05435},
+        archivePrefix={arXiv},
+        primaryClass={cs.CV},
+        url={https://arxiv.org/abs/2602.05435}, 
+}</code></pre>
+    </section>
+
+</div>
+
+<!-- ==================== Lightweight Scripts ==================== -->
+<script>
+(function() {
+    // === Intersection Observer for scroll reveal ===
+    var revealEls = document.querySelectorAll('.reveal');
+    if ('IntersectionObserver' in window) {
+        var observer = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    // Stagger children if any
+                    var children = entry.target.querySelectorAll('.reveal-child');
+                    children.forEach(function(child, i) {
+                        setTimeout(function() {
+                            child.classList.add('visible');
+                        }, 80 * i);
+                    });
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+
+        revealEls.forEach(function(el) { observer.observe(el); });
+    } else {
+        // Fallback: show everything immediately
+        revealEls.forEach(function(el) { el.classList.add('visible'); });
+    }
+
+    // === Floating nav: show after scrolling past hero ===
+    var nav = document.getElementById('floatingNav');
+    var hero = document.getElementById('hero');
+    if (nav && hero) {
+        var navObserver = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (!entry.isIntersecting) {
+                    nav.classList.add('visible');
+                } else {
+                    nav.classList.remove('visible');
+                }
+            });
+        }, { threshold: 0, rootMargin: '0px' });
+        navObserver.observe(hero);
+    }
+
+    // === Smooth scroll for nav links ===
+    document.querySelectorAll('.floating-nav a[href^="#"]').forEach(function(link) {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            var target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        });
+    });
+})();
+</script>
+
+</body>
+</html>

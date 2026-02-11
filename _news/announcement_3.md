@@ -1,8 +1,8 @@
 ---
 layout: post
-date: 2025-01-22
+date: 2025-03-8
 inline: true
 related_posts: false
 ---
 
-One paper [SymmetricDiffusers](https://arxiv.org/abs/2410.02942) was accepted to **ICLR 2025** as **Oral** (213/11672, Top 1.8%)!
+One paper [DiffuGTS](https://openaccess.thecvf.com/content/CVPR2025/papers/Jiang_Advancing_Generalizable_Tumor_Segmentation_with_Anomaly-Aware_Open-Vocabulary_Attention_Maps_and_CVPR_2025_paper.pdf) was accepted to **CVPR 2025**!
