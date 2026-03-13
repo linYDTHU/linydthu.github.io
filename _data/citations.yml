@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-03-06'
+  last_updated: '2026-03-13'
 papers:
   jg2atr8AAAAJ:3s1wT3WcHBgC:
     citations: 0
@@ -10,11 +10,11 @@ papers:
     title: Advancing Generalizable Tumor Segmentation with Anomaly-Aware Open-Vocabulary Attention Maps and Frozen Foundation Diffusion Models
     year: '2025'
   jg2atr8AAAAJ:IWHjjKOFINEC:
-    citations: 73
+    citations: 74
     title: On sparse modern hopfield model
     year: '2023'
   jg2atr8AAAAJ:d1gkVwhDpl0C:
-    citations: 19
+    citations: 20
     title: Resolving copycat problems in visual imitation learning via residual action prediction
     year: '2022'
   jg2atr8AAAAJ:hFOr9nPyWt4C:
@@ -26,6 +26,6 @@ papers:
     title: 'QDM: Quadtree-Based Region-Adaptive Sparse Diffusion Models for Efficient Image Super-Resolution'
     year: '2025'
   jg2atr8AAAAJ:u5HHmVD_uO8C:
-    citations: 18
+    citations: 19
     title: Adaptive model design for Markov decision process
     year: '2022'
