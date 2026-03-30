@@ -49,17 +49,32 @@ cv:
         end_date: 2022-07
 
     Experience:
+      - company: Tencent ARC Lab
+        position: Research Intern
+        location: Shenzhen, China
+        url: https://arc.tencent.com/en/ai
+        start_date: 2026-03
+        end_date: present
+        highlights:
+          - "Long video generation"
+
       - company: KLING Team, Kuaishou Technology
         position: Research Intern
         location: Shenzhen, China
+        url: https://klingai.com/cn/
         start_date: 2025-07
-        end_date: present
+        end_date: 2025-08
+        highlights:
+          - "[Stable Velocity: A Variance Perspective on Flow Matching](https://linydthu.github.io/StableVelocity/)"
 
       - company: Shanghai Artificial Intelligence Laboratory
         position: Research Intern
         location: Shanghai, China
+        url: https://www.shlab.org.cn/
         start_date: 2023-10
         end_date: 2024-06
+        highlights:
+          - "[QDM: Quadtree-Based Region-Adaptive Sparse Diffusion Models](https://arxiv.org/abs/2503.12015)"
 
     Awards:
       - title: AISTATS 2025 Best Reviewer Award

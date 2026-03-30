@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Received [**AISTATS 2025 Best Reviewer Award**](https://aistats.org/aistats2025//awards.html)! 🎉
+Received [AISTATS 2025 Best Reviewer Award](https://aistats.org/aistats2025//awards.html)! 🎉
