@@ -23,10 +23,7 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "news-started-mphil-program-in-the-department-of-electrical-and-electronic-engineering-the-university-of-hong-kong-advised-by-prof-xiaojuan-qi",
-          title: 'Started MPhil program in the Department of Electrical and Electronic Engineering, The University...',
-          description: "",
-          section: "News",},{id: "news-one-paper-symmetricdiffusers-was-accepted-to-iclr-2025-as-oral-213-11672-top-1-8",
+        },{id: "news-one-paper-symmetricdiffusers-was-accepted-to-iclr-2025-as-oral-213-11672-top-1-8",
           title: 'One paper SymmetricDiffusers was accepted to ICLR 2025 as Oral (213/11672, Top 1.8%)!...',
           description: "",
           section: "News",},{id: "news-one-paper-diffugts-was-accepted-to-cvpr-2025",
@@ -37,6 +34,12 @@ ninja.data = [{
           description: "",
           section: "News",},{id: "news-joined-kling-team-kuaishou-technology-as-a-research-intern",
           title: 'Joined KLING Team, Kuaishou Technology as a Research Intern.',
+          description: "",
+          section: "News",},{id: "news-joined-tencent-arc-lab-as-a-research-intern-working-on-long-video-generation",
+          title: 'Joined Tencent ARC Lab as a research intern, working on long video generation....',
+          description: "",
+          section: "News",},{id: "news-one-paper-qdm-was-accepted-to-cvpr-2026-findings",
+          title: 'One paper QDM was accepted to CVPR 2026 Findings!',
           description: "",
           section: "News",},{
         id: 'social-email',
