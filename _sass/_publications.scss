@@ -81,6 +81,13 @@
         margin-left: 4px;
       }
 
+      .periodical {
+        color: var(--global-text-color);
+        font-weight: 700;
+        font-size: 0.95rem;
+        margin-top: 0.25rem;
+      }
+
       .author {
         a {
           border-bottom: 1px dashed var(--global-theme-color);
