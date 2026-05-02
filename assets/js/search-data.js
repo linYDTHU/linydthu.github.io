@@ -41,6 +41,9 @@ ninja.data = [{
           section: "News",},{id: "news-one-paper-qdm-was-accepted-to-cvpr-2026-findings",
           title: 'One paper QDM was accepted to CVPR 2026 Findings!',
           description: "",
+          section: "News",},{id: "news-two-papers-were-accepted-to-icml-2026-stable-velocity-and-absorbing-quantization-error-by-deformable-noise-scheduler-for-diffusion-models",
+          title: 'Two papers were accepted to ICML 2026: Stable Velocity and Absorbing Quantization Error...',
+          description: "",
           section: "News",},{
         id: 'social-email',
         title: 'email',
