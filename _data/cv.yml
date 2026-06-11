@@ -1,6 +1,6 @@
 cv:
   name: Donglin Yang
-  label: MPhil Student
+  label: Ph.D. Candidate
   email: ydlin718@gmail.com
   location: Hong Kong
   image: ""
@@ -14,7 +14,7 @@ cv:
       - institution: Department of Electrical and Electronic Engineering, The University of Hong Kong
         location: Hong Kong, China
         url: https://www.eee.hku.hk/
-        studyType: MPhil
+        studyType: PhD
         start_date: 2024-09
         end_date: present
         highlights:
@@ -77,6 +77,10 @@ cv:
           - "[QDM: Quadtree-Based Region-Adaptive Sparse Diffusion Models](https://arxiv.org/abs/2503.12015)"
 
     Awards:
+      - title: ICML 2026 Gold Reviewer Reward
+        date: 2026-05-14
+        awarder: ICML 2026
+
       - title: AISTATS 2025 Best Reviewer Award
         date: 2025
         awarder: AISTATS 2025
