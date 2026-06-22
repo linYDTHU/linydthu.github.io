@@ -1,16 +1,16 @@
 metadata:
-  last_updated: '2026-05-25'
+  last_updated: '2026-06-22'
 papers:
   jg2atr8AAAAJ:3s1wT3WcHBgC:
     citations: 1
     title: 'Stable Velocity: A Variance Perspective on Flow Matching'
     year: '2026'
   jg2atr8AAAAJ:HoB7MX3m0LUC:
-    citations: 3
+    citations: 4
     title: Advancing Generalizable Tumor Segmentation with Anomaly-Aware Open-Vocabulary Attention Maps and Frozen Foundation Diffusion Models
     year: '2025'
   jg2atr8AAAAJ:IWHjjKOFINEC:
-    citations: 76
+    citations: 80
     title: On sparse modern hopfield model
     year: '2023'
   jg2atr8AAAAJ:d1gkVwhDpl0C:
@@ -22,10 +22,10 @@ papers:
     title: 'Symmetricdiffusers: Learning discrete diffusion on finite symmetric groups'
     year: '2024'
   jg2atr8AAAAJ:pqnbT2bcN3wC:
-    citations: 1
-    title: 'QDM: Quadtree-Based Region-Adaptive Sparse Diffusion Models for Efficient Image Super-Resolution'
-    year: '2025'
+    citations: 2
+    title: 'QDM: Quadtree-based region-adaptive sparse diffusion models for efficient image super-resolution'
+    year: '2026'
   jg2atr8AAAAJ:u5HHmVD_uO8C:
-    citations: 21
+    citations: 23
     title: Adaptive model design for Markov decision process
     year: '2022'
