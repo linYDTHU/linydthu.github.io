@@ -44,8 +44,8 @@ ninja.data = [{
           section: "News",},{id: "news-two-papers-were-accepted-to-icml-2026-stable-velocity-and-absorbing-quantization-error-by-deformable-noise-scheduler-for-diffusion-models",
           title: 'Two papers were accepted to ICML 2026: Stable Velocity and Absorbing Quantization Error...',
           description: "",
-          section: "News",},{id: "news-received-the-icml-2026-gold-reviewer-reward",
-          title: 'Received the ICML 2026 Gold Reviewer Reward!',
+          section: "News",},{id: "news-received-the-icml-2026-gold-reviewer-award",
+          title: 'Received the ICML 2026 Gold Reviewer Award!',
           description: "",
           section: "News",},{
         id: 'social-email',
