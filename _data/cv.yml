@@ -77,7 +77,7 @@ cv:
           - "[QDM: Quadtree-Based Region-Adaptive Sparse Diffusion Models](https://arxiv.org/abs/2503.12015)"
 
     Awards:
-      - title: ICML 2026 Gold Reviewer Reward
+      - title: ICML 2026 Gold Reviewer Award
         date: 2026-05-14
         awarder: ICML 2026
 
@@ -105,5 +105,8 @@ cv:
         date: 2019
 
     Academic Service:
-      - name: Reviewer
-        summary: "NeurIPS 2024, AISTATS (2025, 2026), ICLR (2025, 2026), ICCV 2025, ICML 2026"
+      - name: Journal Reviewer
+        summary: "IEEE Transactions on Circuits and Systems for Video Technology (TCSVT), Transactions on Machine Learning Research (TMLR)"
+
+      - name: Conference Reviewer
+        summary: "NeurIPS 2024, AISTATS (2025, 2026), ICLR (2025, 2026), ICCV 2025, ICML 2026, AAAI 2027"
