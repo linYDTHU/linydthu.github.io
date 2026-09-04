@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-08-24'
+  last_updated: '2026-09-04'
 papers:
   jg2atr8AAAAJ:3s1wT3WcHBgC:
     citations: 5
@@ -10,7 +10,7 @@ papers:
     title: Advancing Generalizable Tumor Segmentation with Anomaly-Aware Open-Vocabulary Attention Maps and Frozen Foundation Diffusion Models
     year: '2025'
   jg2atr8AAAAJ:IWHjjKOFINEC:
-    citations: 86
+    citations: 87
     title: On sparse modern hopfield model
     year: '2023'
   jg2atr8AAAAJ:d1gkVwhDpl0C:
