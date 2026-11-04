@@ -56,14 +56,14 @@ cv:
         start_date: 2026-03
         end_date: present
         highlights:
-          - "Long video generation"
+          - "Improved DMD training for higher-quality causal video generation."
 
       - company: KLING Team, Kuaishou Technology
         position: Research Intern
         location: Shenzhen, China
         url: https://klingai.com/cn/
         start_date: 2025-07
-        end_date: 2025-08
+        end_date: 2026-02
         highlights:
           - "[Stable Velocity: A Variance Perspective on Flow Matching](https://linydthu.github.io/StableVelocity/)"
 
@@ -109,4 +109,4 @@ cv:
         summary: "IEEE Transactions on Circuits and Systems for Video Technology (TCSVT), Transactions on Machine Learning Research (TMLR)"
 
       - name: Conference Reviewer
-        summary: "NeurIPS 2024, AISTATS (2025, 2026), ICLR (2025, 2026), ICCV 2025, ICML 2026, AAAI 2027"
+        summary: "NeurIPS 2024, AISTATS (2025, 2026, 2027), ICLR (2025, 2026, 2027), ICCV 2025, ICML 2026, AAAI 2027"
