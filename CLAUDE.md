@@ -63,22 +63,22 @@ purgecss -c purgecss.config.js
 
 ### Key Directories
 
-| Directory | Purpose |
-|-----------|---------|
-| `_config.yml` | Primary site configuration (title, author, URLs, feature flags) |
-| `_bibliography/papers.bib` | BibTeX bibliography for publications |
-| `_data/` | YAML data files (socials, coauthors, cv, venues, repositories) |
-| `_includes/` | Reusable Liquid template components |
-| `_layouts/` | Page layout templates (about, post, bib, distill, cv) |
-| `_news/` | News/announcement entries |
-| `_pages/` | Static pages (about, cv, publications, projects, teaching) |
-| `_posts/` | Blog posts (format: YYYY-MM-DD-title.md) |
-| `_projects/` | Project showcase entries |
-| `_sass/` | SCSS stylesheets |
-| `_scripts/` | JavaScript files |
-| `_teachings/` | Course and teaching entries |
-| `_plugins/` | Custom Ruby plugins for Jekyll |
-| `assets/img/` | Images and profile pictures |
+| Directory                  | Purpose                                                         |
+| -------------------------- | --------------------------------------------------------------- |
+| `_config.yml`              | Primary site configuration (title, author, URLs, feature flags) |
+| `_bibliography/papers.bib` | BibTeX bibliography for publications                            |
+| `_data/`                   | YAML data files (socials, coauthors, cv, venues, repositories)  |
+| `_includes/`               | Reusable Liquid template components                             |
+| `_layouts/`                | Page layout templates (about, post, bib, distill, cv)           |
+| `_news/`                   | News/announcement entries                                       |
+| `_pages/`                  | Static pages (about, cv, publications, projects, teaching)      |
+| `_posts/`                  | Blog posts (format: YYYY-MM-DD-title.md)                        |
+| `_projects/`               | Project showcase entries                                        |
+| `_sass/`                   | SCSS stylesheets                                                |
+| `_scripts/`                | JavaScript files                                                |
+| `_teachings/`              | Course and teaching entries                                     |
+| `_plugins/`                | Custom Ruby plugins for Jekyll                                  |
+| `assets/img/`              | Images and profile pictures                                     |
 
 ### Content Collections
 
@@ -119,14 +119,14 @@ Collections are defined in `_config.yml` under the `collections` key. Each colle
 
 ## Common Configuration Changes
 
-### _config.yml Key Settings
+### \_config.yml Key Settings
 
 ```yaml
 title: Donglin Yang
 first_name: Donglin
 last_name: Yang
 url: https://linydthu.github.io
-baseurl:  # Leave empty for user site
+baseurl: # Leave empty for user site
 navbar_fixed: true
 footer_fixed: true
 search_enabled: true
@@ -135,6 +135,7 @@ search_enabled: true
 ### Content File Formats
 
 **Blog Post Frontmatter (`_posts/`):**
+
 ```yaml
 ---
 layout: post
@@ -145,22 +146,24 @@ categories: category-name
 ```
 
 **Project Frontmatter (`_projects/`):**
+
 ```yaml
 ---
 layout: page
 title: Project Name
 description: Short description
 img: /assets/img/project-image.jpg
-importance: 1  # Display order
+importance: 1 # Display order
 ---
 ```
 
 **News Entry (`_news/`):**
+
 ```yaml
 ---
 layout: post
 date: YYYY-MM-DD HH:MM:SS
-inline: true  # If true, shown inline on about page
+inline: true # If true, shown inline on about page
 related_posts: false
 ---
 News content here
@@ -168,21 +171,26 @@ News content here
 
 ## Common Pitfalls
 
-### YAML Syntax in _config.yml
+### YAML Syntax in \_config.yml
+
 - Quote strings containing special characters (`:`, `&`, `#`): `title: "My: Title"`
 
 ### URL/baseurl Configuration
+
 - Personal site: `url: https://username.github.io`, `baseurl:` (empty)
 - Project site: `url: https://username.github.io`, `baseurl: /repo-name/`
 
 ### CSS/JS Not Loading
+
 - Verify `url` and `baseurl` are correct in `_config.yml`
 - Clear browser cache (Ctrl+Shift+Del)
 
 ### Related Posts Error
+
 - "Zero vectors cannot be normalized": Add meaningful content to posts or set `related_posts: false`
 
 ### Port Already in Use
+
 - Docker: `docker compose down && docker compose up`
 - Native: `lsof -i :4000 | grep LISTEN | awk '{print $2}' | xargs kill`
 
