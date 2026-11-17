@@ -1,0 +1,9 @@
+initialization,iterations,overall_without_detachment,overall_with_detachment,dynamic_degree_without_detachment,dynamic_degree_with_detachment
+ODE,750,0.8406,0.8401,0.6000,0.7194
+ODE,1000,0.8354,0.8367,0.5528,0.6528
+ODE,1250,0.8338,0.8366,0.5028,0.5694
+ODE,1500,0.8369,0.8363,0.5194,0.5056
+CD,750,0.8438,0.8320,0.8056,0.8472
+CD,1000,0.8426,0.8267,0.8056,0.9389
+CD,1250,0.8393,0.8282,0.7139,0.9000
+CD,1500,0.8384,0.8313,0.6778,0.8111

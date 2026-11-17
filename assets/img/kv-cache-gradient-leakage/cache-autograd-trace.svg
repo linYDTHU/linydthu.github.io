@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="380" viewBox="0 0 1000 380" role="img" aria-labelledby="title desc">
+  <title id="title">Cache values and the derivative retained by autograd</title>
+  <desc id="desc">
+    An exit write stores two values of 2 and records derivative 2 for each. A no-grad refresh changes the values to 5 but leaves both recorded
+    derivatives at 2. Detach removes this historical path. For a later loss with q equal to 3, the leaked gradient is 12 without detach.
+  </desc>
+  <rect width="1000" height="380" fill="white" />
+  <g font-family="Arial, Helvetica, sans-serif" fill="#202a25">
+    <text x="28" y="31" font-size="14" fill="#68716d" font-weight="400">CPU trace: w = 1, q = 3; two cache entries</text>
+    <text x="28" y="67" font-size="12" fill="#68716d" font-weight="600">STEP</text>
+    <text x="188" y="67" font-size="12" fill="#68716d" font-weight="600">OPERATION</text>
+    <text x="555" y="67" font-size="12" fill="#68716d" font-weight="600">STORED VALUES</text>
+    <text x="745" y="67" font-size="12" fill="#68716d" font-weight="600">RECORDED ∂cache / ∂w</text>
+    <path d="M28 82H972" stroke="#dce2de" />
+    <text x="28" y="118" font-size="16" fill="#202a25" font-weight="400">Exit write</text>
+    <text x="188" y="118" font-size="16" fill="#202a25" font-weight="400" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">
+      cache[:2] = 2 * w
+    </text>
+    <text x="555" y="118" font-size="17" fill="#202a25" font-weight="400" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">
+      [2, 2]
+    </text>
+    <text x="745" y="118" font-size="17" fill="#202a25" font-weight="400" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">
+      [2, 2]
+    </text>
+    <path d="M28 140H972" stroke="#dce2de" />
+    <text x="28" y="178" font-size="16" fill="#202a25" font-weight="400">Refresh</text>
+    <text x="188" y="170" font-size="15" fill="#202a25" font-weight="400" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">
+      with torch.no_grad():
+    </text>
+    <text x="208" y="193" font-size="15" fill="#202a25" font-weight="400" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">
+      cache[:2] = 5
+    </text>
+    <text x="555" y="178" font-size="17" fill="#202a25" font-weight="400" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">
+      [5, 5]
+    </text>
+    <text x="745" y="178" font-size="17" fill="#a43b33" font-weight="600" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">
+      [2, 2]
+    </text>
+    <text x="829" y="178" font-size="13" fill="#a43b33" font-weight="400">← still attached</text>
+    <path d="M28 213H972" stroke="#dce2de" />
+    <text x="28" y="249" font-size="16" fill="#202a25" font-weight="400">Detach</text>
+    <text x="188" y="249" font-size="16" fill="#202a25" font-weight="400" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">
+      cache = cache.detach()
+    </text>
+    <text x="555" y="249" font-size="17" fill="#202a25" font-weight="400" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">
+      [5, 5]
+    </text>
+    <text x="745" y="249" font-size="16" fill="#23685d" font-weight="600">Disconnected</text>
+    <path d="M28 271H972" stroke="#dce2de" />
+    <text x="28" y="304" font-size="16" fill="#202a25" font-weight="400">Later loss: L = q × sum(cache[:2]) = 30 in both cases.</text>
+    <text x="28" y="341" font-size="16" fill="#a43b33" font-weight="400">Without detach: ∂L/∂w = 3 × (2 + 2) = 12</text>
+    <text x="555" y="341" font-size="16" fill="#23685d" font-weight="400">With detach: no path to w (None)</text>
+  </g>
+</svg>

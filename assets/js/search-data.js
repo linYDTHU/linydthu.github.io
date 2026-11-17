@@ -16,6 +16,13 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/publications/";
           },
+        },{id: "nav-blog",
+          title: "Blog",
+          description: "",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/blog/";
+          },
         },{id: "nav-cv",
           title: "CV",
           description: "",
@@ -23,7 +30,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "news-one-paper-symmetricdiffusers-was-accepted-to-iclr-2025-as-oral-213-11672-top-1-8",
+        },{id: "post-kv-cache-gradient-leakage-in-autoregressive-video-training",
+        
+          title: "KV Cache Gradient Leakage in Autoregressive Video Training",
+        
+        description: "A KV cache gradient leak inherited from Self Forcing and a two-line fix that reduces DMD training memory by 22%.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/kv-cache-gradient-leakage/";
+          
+        },
+      },{id: "news-one-paper-symmetricdiffusers-was-accepted-to-iclr-2025-as-oral-213-11672-top-1-8",
           title: 'One paper SymmetricDiffusers was accepted to ICLR 2025 as Oral (213/11672, Top 1.8%)!...',
           description: "",
           section: "News",},{id: "news-one-paper-diffugts-was-accepted-to-cvpr-2025",
@@ -46,6 +64,9 @@ ninja.data = [{
           description: "",
           section: "News",},{id: "news-received-the-icml-2026-gold-reviewer-award",
           title: 'Received the ICML 2026 Gold Reviewer Award!',
+          description: "",
+          section: "News",},{id: "news-new-technical-note-kv-cache-gradient-leakage",
+          title: 'New technical note: KV cache gradient leakage.',
           description: "",
           section: "News",},{
         id: 'social-email',
