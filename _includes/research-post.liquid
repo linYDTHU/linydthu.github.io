@@ -1,0 +1,31 @@
+{% assign item = include.item %}
+{% assign heading = include.heading | default: 'h2' %}
+{% if item.redirect contains '://' %}
+  {% assign article_url = item.redirect %}
+{% elsif item.redirect != blank %}
+  {% assign article_url = item.redirect | relative_url %}
+{% else %}
+  {% assign article_url = item.url | relative_url %}
+{% endif %}
+<article class="research-post">
+  <div class="research-post-meta">
+    <time datetime="{{ item.date | date_to_xmlschema }}">{{ item.date | date: '%b %d, %Y' }}</time>
+    {% if item.categories contains 'research' -%}
+      <span>Technical note</span>
+    {%- endif %}
+    {% if item.external_source -%}
+      <span>{{ item.external_source }}</span>
+    {%- endif %}
+  </div>
+  <{{ heading }} class="research-post-title">
+    <a href="{{ article_url }}">
+      {{- item.title -}}
+      <span class="research-post-arrow" aria-hidden="true">
+        {%- if article_url contains '://' %}↗{% else %}→{% endif -%}
+      </span></a
+    >
+  </{{ heading }}>
+  {% if item.description %}
+    <p class="research-post-description">{{ item.description }}</p>
+  {% endif %}
+</article>

@@ -1,0 +1,62 @@
+{% assign kv_first_case = site.data.kv_cache_cases.first %}
+{% assign kv_video_root = '/assets/video/kv-cache-gradient-leakage/emafix-750/' | relative_url %}
+<section id="kv-comparison" class="kv-comparison" aria-label="Video comparisons after 750 DMD iterations">
+  <div class="kv-initialization-switch" role="group" aria-label="Initialization checkpoint">
+    <button type="button" data-initialization="cd" aria-pressed="true">CD initialization</button>
+    <button type="button" data-initialization="ode" aria-pressed="false">ODE initialization</button>
+  </div>
+  <div class="kv-comparison-heading">
+    <span id="kv-training-label" class="kv-eyebrow">Causal Forcing++ · CD → DMD · 750 iterations · EMA</span>
+    <span id="kv-pagination">Example 1 / {{ site.data.kv_cache_cases.size }}</span>
+  </div>
+  <div class="kv-prompt" aria-labelledby="kv-prompt-label">
+    <span id="kv-prompt-label" class="kv-eyebrow">Prompt</span>
+    <p id="kv-prompt-text">{{ site.data.kv_cache_cases.first.prompt | escape }}</p>
+  </div>
+  <div class="kv-video-grid">
+    <figure>
+      <figcaption id="kv-left-label">DMD · Without KV detachment</figcaption>
+      <div id="kv-left-frame" class="kv-animation-frame">
+        <img
+          id="kv-left"
+          class="kv-pair-image"
+          src="{{ kv_video_root }}cd/{{ kv_first_case.id }}-pair-hq.jpg"
+          width="1664"
+          height="480"
+          loading="lazy"
+          alt="Video from the CD-initialized model after DMD training without KV cache detachment"
+        >
+      </div>
+      <p class="kv-video-links"><a id="kv-left-mp4" href="{{ kv_video_root }}cd/{{ kv_first_case.id }}-original.mp4" download>Download MP4</a></p>
+    </figure>
+    <figure>
+      <figcaption id="kv-right-label">DMD · With KV detachment</figcaption>
+      <div id="kv-right-frame" class="kv-animation-frame kv-crop-right">
+        <img
+          id="kv-right"
+          class="kv-pair-image"
+          src="{{ kv_video_root }}cd/{{ kv_first_case.id }}-pair-hq.jpg"
+          width="1664"
+          height="480"
+          loading="lazy"
+          alt="Video from the CD-initialized model after DMD training with KV cache detachment"
+        >
+      </div>
+      <p class="kv-video-links"><a id="kv-right-mp4" href="{{ kv_video_root }}cd/{{ kv_first_case.id }}-detached.mp4" download>Download MP4</a></p>
+    </figure>
+  </div>
+  <div class="kv-comparison-toolbar">
+    <button type="button" id="kv-previous">← Previous</button>
+    <button type="button" id="kv-play" aria-pressed="false">Play both</button>
+    <button type="button" id="kv-restart">Replay</button>
+    <button type="button" id="kv-next">Next →</button>
+  </div>
+  <p id="kv-status" class="kv-comparison-status" role="status" aria-live="polite">Ready to play.</p>
+  <p class="kv-small">832 × 480 per video · 16 fps</p>
+  <noscript>Enable JavaScript to play and browse the comparisons, or download the MP4s above.</noscript>
+  <script type="application/json" id="kv-case-data">
+    {{ site.data.kv_cache_cases | jsonify }}
+  </script>
+  <span id="kv-video-root" data-root="{{ kv_video_root }}" hidden></span>
+</section>
+<script src="{{ '/assets/js/kv-cache-comparison.js' | relative_url }}?v=20261117-downloads" defer></script>

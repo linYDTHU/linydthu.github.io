@@ -1,0 +1,24 @@
+---
+layout: default
+---
+<link rel="stylesheet" href="{{ '/assets/css/kv-cache-gradient-leakage.css' | relative_url }}?v=20261114-editorial">
+<link rel="stylesheet" href="{{ '/assets/css/kv-cache-editorial.css' | relative_url }}?v=20261117-citation">
+<div class="post kv-article">
+  <header class="kv-hero">
+    <div class="kv-publication-line">
+      <span>Technical note</span><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%B %d, %Y' }}</time>
+    </div>
+    <h1>KV cache gradient leakage <span>in autoregressive video training</span></h1>
+    <p class="kv-deck">An inherited autograd bug, a two-line fix, and its effect on DMD training.</p>
+    <p class="kv-byline">Donglin Yang</p>
+    <p class="kv-affiliation">This bug was identified during my internship at <a href="https://arc.tencent.com/">Tencent ARC Lab</a>.</p>
+  </header>
+  <nav class="kv-contents" aria-label="Article sections">
+    <a href="#how-a-fresh-cache-keeps-a-stale-graph"><span>01</span> Mechanism</a>
+    <a href="#the-fix-detach-the-cache-at-the-boundary"><span>02</span> The fix</a>
+    <a href="#results"><span>03</span> Results</a>
+    <a href="#ode-initialization-explore-the-paired-videos"><span>04</span> Videos</a>
+    <a href="#where-the-pattern-appears-in-official-code"><span>05</span> Code audit</a>
+  </nav>
+  <article class="post-content" id="markdown-content">{{ content }}</article>
+</div>
